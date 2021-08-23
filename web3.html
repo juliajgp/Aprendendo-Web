@@ -2,40 +2,71 @@
 
 <html>
     <head>
-        <title>Classes e IDs</title>
+        <title>Div e span</title>
         <meta charset="utf-8">
 
         <style type="text/css">
-            p {
-                color: green;
-            }
             
-            h1 {
-                color:blueviolet;
-            }
-            /* o . define uma classe */
-            .azul {
-                color: blue;
+            #topo {
+                background: cadetblue;
             }
 
-            /* ID 
-            #principal {
-                background: coral;
-            }*/
+            #conteudo {
+                background: crimson;
+            }
+
+            #rodape {
+                background: greenyellow;
+            }
+
+            #assinatura {
+                background: hotpink;
+            }
+
+            .produto {
+                background: rgb(241, 228, 228);
+                margin: 10px;
+            }
+
+            .azul {
+                color: rgb(13, 160, 218);
+            }
+
 
         </style>
     </head>
 
     <body>
-        <h1>Estilo CSS</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus tempus nisi at aliquet. Vestibulum hendrerit pretium tempor. Aenean consequat ut massa at iaculis. 
-        </p>
 
-        <p class="azul">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus tempus nisi at aliquet. Vestibulum hendrerit pretium tempor. Aenean consequat ut massa at iaculis.
-        </p>
+        <div id="topo">
+
+            <img src="amazon.png" width="200">
+            <ul>
+                <li>Home</li>
+                <li>Produtos</li>
+                <li>Contatos</li>
+            </ul>
+
+        </div>
         
+        <div id="conteudo">
+
+            <span class="produto">
+                Produto 1
+            </span>
+            <span class="produto">
+                Produto 2
+            </span>
+            <span class="produto">
+                Produto 3
+            </span>
+
+        </div>
+        <br>
+
+        <div id="rodape">
+            Todos os <span class="azul">direitos</span> reservados
+        </div>
 
     </body>
 
