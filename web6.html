@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>Elementos flutuantes</title>
+        <meta charset="utf-8">
+
+        <!--<link rel="stylesheet" type="text/css" href="Estilo.css">-->
+
+        <style type="text/css">
+
+            body {
+                background: #007fc7;
+            }
+        
+            #container {
+                background: #fff;
+                width: 800px;
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            p {
+                width: 300px;
+            }
+
+            .absolute {
+                background: violet;
+                position: absolute;
+                border: 1px solid red;
+                top: 0px;
+                right: 20px;
+            }
+
+            .fixed {
+                background: violet;
+                position: fixed;
+                border: 1px solid red;
+                top: 0px;
+                left: 0px;
+            }
+
+        </style>
+
+    </head>
+
+    <body class="fundo">
+
+        <div id="container">
+            <h1>Posicionamentos</h1>
+            <p>
+                P1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit sapien dui, quis pharetra nisi aliquam et.  
+            </p>
+            <p class="fixed">
+                P2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit sapien dui, quis pharetra nisi aliquam et.  
+            </p>
+            <p>
+                P3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur hendrerit sapien dui, quis pharetra nisi aliquam et.  
+            </p>
+        </div>
+
+    </body>
+
+</html>
