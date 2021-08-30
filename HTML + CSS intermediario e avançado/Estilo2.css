@@ -1,4 +1,4 @@
-ul {
+/*ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -27,4 +27,43 @@ ul .primeiro a{
 ul a:hover {
     color: #085662;
     background: #44cade;
+}*/
+
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px;
+}
+
+ul li {
+    float: left;
+    background: url(Imagens/aba-direita.png) no-repeat top right;
+}
+
+li a {
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    text-decoration: none;
+    background: url(Imagens/aba-esquerda.png) no-repeat top left;
+    color: #fff;
+}
+
+ul a:hover {
+    color: #894a1f;
+}
+
+ul #atual {
+    background: url(Imagens/aba-direita-atual.png) no-repeat top right;
+}
+
+ul #atual a {
+    background: url(Imagens/aba-esquerda-atual.png) no-repeat top left;
+
+}
+
