@@ -27,7 +27,7 @@ ul .primeiro a{
 ul a:hover {
     color: #085662;
     background: #44cade;
-}*/
+}
 
 body {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -65,5 +65,50 @@ ul #atual {
 ul #atual a {
     background: url(Imagens/aba-esquerda-atual.png) no-repeat top left;
 
+}*/
+
+body {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #f2f2f2;
 }
 
+#container {
+    width: 720px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#marca {
+    height: 100px;
+    background: #9e9e9e;
+    text-align: center;
+    line-height: 100px;
+}
+
+#conteudo {
+    width: 520px;
+    float: right;
+}
+
+#navegacao {
+    width: 180px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+
+}
+
+#navegacao ul {
+    list-style: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+}
