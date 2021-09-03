@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Layout</title>
+        <title>Formulários</title>
         <meta charset="utf-8">
 
         <link rel="stylesheet" type="text/css" href="Estilo2.css">
@@ -11,39 +11,54 @@
     
     <body>
 
-        <h2>Estilizando tabelas</h2>
-        <table>
-            <tr>
-                <th>Código</th>
-                <th>Produto</th>
-                <th class="numero">Preço</th>
-            </tr>
+        <h2>Estilizando Formulários</h2>
+        <form>
+            <fieldset>
+                <legend>Detalhes de contato</legend>
 
-            <tr class="alternado">
-                <td>001</td>
-                <td>Notebook</td>
-                <td class="numero">1500</td>
-            </tr>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
 
-            <tr>
-                <td>002</td>
-                <td>Tablet</td>
-                <td class="numero">1500</td>
-            </tr>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+                </div>
 
-            <tr class="alternado">
-                <td>003</td>
-                <td>Celular</td>
-                <td class="numero">1500</td>
-            </tr>
+                <div>
+                    <label for="url">URL:</label>
+                    <input type="text" name="url" id="url">
+                </div>
 
-            <tr>
-                <td>004</td>
-                <td>Meu cu</td>
-                <td class="numero">1500</td>
-            </tr>
+            </fieldset>
 
-        </table>
+            <fieldset>
+                <legend>Comentários</legend>
+
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" id="mensagem"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Lembrar de mim</legend>
+
+                <div>
+                    <label>
+                        <input type="radio" name="lembrar" id="sim">Sim
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="lembrar" id="não">Não
+                    </label>
+                </div>
+            </fieldset>
+
+        </form>
 
     </body>
 </html>
