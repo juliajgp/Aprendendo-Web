@@ -10,7 +10,7 @@ a = b;
 b = c;
 
 document.write('A=' + a + '<br>');
-document.write('B=' + b + '<br>');*/
+document.write('B=' + b + '<br>');
 
 var variavel1 = prompt('Digite algum numero');
 var variavel2 = prompt('Digite outro numero');
@@ -26,3 +26,16 @@ document.write(variavel1 + variavel2);
 
 // convertendo o int pra stringS
 document.write(variavel1.toString() + variavel2);
+
+//************************
+*/
+
+function calcularAreaTerreno(largura, comprimento) {
+
+    var area = largura * comprimento;
+
+    return area;
+}
+
+document.write(calcularAreaTerreno(15, 25));
+
