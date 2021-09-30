@@ -28,7 +28,7 @@ document.write(variavel1 + variavel2);
 document.write(variavel1.toString() + variavel2);
 
 //************************
-*/
+
 
 function calcularAreaTerreno(largura, comprimento) {
 
@@ -38,4 +38,16 @@ function calcularAreaTerreno(largura, comprimento) {
 }
 
 document.write(calcularAreaTerreno(15, 25));
+
+var data = new Date(2017, 0, 15);
+var data2 = new Date(2017, 1, 23);
+
+document.write(data.toString());
+data.setDate(data.getDate() + 1);
+document.write('<hr />');
+document.write(data.toString());*/
+
+
+
+
 
