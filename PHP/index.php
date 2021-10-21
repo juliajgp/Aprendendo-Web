@@ -60,6 +60,11 @@
             }
             echo calcularArea(20, 10) .'<br>';
 
+            //manipulação strings
+            $texto = "Curso";
+            echo strtolower($texto). '<br>';
+            echo strtoupper($texto). '<br>';
+            echo ucfirst($texto). '<br>';
 
         ?>
 
