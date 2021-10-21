@@ -66,6 +66,21 @@
             echo strtoupper($texto). '<br>';
             echo ucfirst($texto). '<br>';
 
+            //arrays
+            $lista_frutas = array('Banana', 'Maçã', 'Morango', 'Uva');
+            //$lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva'];
+            $lista_frutas[] = 'Abacaxi';
+
+            echo '<pre>';
+            var_dump($lista_frutas);
+            echo '</pre>';
+            echo '<br>';
+            echo '<pre>';
+            print_r($lista_frutas);
+            echo '</pre>';
+
+            echo in_array('Maçã', $lista_frutas);
+
         ?>
 
         <h1>Ficha Cadastral</h1>
