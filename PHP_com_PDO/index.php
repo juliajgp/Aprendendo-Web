@@ -1,47 +1,51 @@
 <?php
 
-    $dsn = 'mysql:host=localhost;dbname=php_com_pdo';
-    $usuario = 'root';
-    $senha = '';
+    if(!empty($_POST['usuario']) && !empty($_POST['senha'])){
 
-    try{
+        $dsn = 'mysql:host=localhost;dbname=php_com_pdo';
+        $usuario = 'root';
+        $senha = '';
 
-        $conexao = new PDO($dsn, $usuario, $senha);
+        try {
 
-        $query = '
-            select * from tb_usuarios
-        ';
+            $conexao = new PDO($dsn, $usuario, $senha);
 
-        //$stmt = $conexao->query($query);
+            $query = "select * from tb_usuarios where";
+            $query .= " email = :usuario ";
+            $query .= " AND senha = :senha ";
 
-        foreach($conexao->query($query) as $key => $value){
-            print_r($value);
+            $stmt = $conexao->prepare($query);
+            $stmt->bindValue(':usuario', $_POST['usuario']);
+            $stmt->bindValue(':senha', $_POST['senha']);
+
+            $stmt->execute();
+            
+            $usuario = $stmt->fetch();
+            print_r($usuario);
+
+
+        } catch(PDOException $e){
+            echo 'Erro '.$e->getCode().' Mensagem: '.$e->getMessage();
         }
-
-        //$lista_usuario = $stmt->fetchAll(PDO::FETCH_OBJ);
-        //caso queira numeros: FETCH_NUM
-        //caso queira ambos, não passe parametros ou passa FETCH_BOTH
-        //se passar FETCH_OBJ, agora é objeto e não mais array
-
-        //echo '<pre>';
-        //print_r($lista_usuario);
-        //echo '</pre>';
-
-        /*
-        foreach($lista_usuario as $key => $value){
-            print_r($value);
-            //echo $value['nome'];
-            echo '<hr>';
-        }*/
-
-
-        //echo $lista[2]['nome'];
-        //objeto: echo $lista[1]->nome;
-        
-
-    } catch(PDOException $e){
-        echo 'Erro '.$e->getCode().' Mensagem: '.$e->getMessage();
-        //registrar erro
     }
 
+    
+
 ?>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <form method="post" action="index.php">
+            <input type="text" placeholder="usuario" name="usuario">
+            <br>
+            <input type="password" placeholder="senha" name="senha">
+            <br>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </body>
+
+</html>
