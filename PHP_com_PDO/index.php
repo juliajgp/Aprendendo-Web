@@ -8,46 +8,23 @@
 
         $conexao = new PDO($dsn, $usuario, $senha);
 
-        /*
         $query = '
-            create table if not exists tb_usuarios(
-                id int not null primary key auto_increment,
-                nome varchar(50) not null,
-                email varchar(100) not null,
-                senha varchar(32) not null
-            )
+            select * from tb_usuarios where id = 11
         ';
 
-        $retorno = $conexao->exec($query);
-        echo $retorno;
-        */
+        $stmt = $conexao->query($query);
+        $usuario = $stmt->fetch(PDO::FETCH_OBJ);
+        //caso queira numeros: FETCH_NUM
+        //caso queira ambos, não passe parametros ou passa FETCH_BOTH
+        //se passar FETCH_OBJ, agora é objeto e não mais array
+        echo '<pre>';
+        print_r($usuario);
+        echo '</pre>';
 
-        $query = '
-            insert into tb_usuarios(
-                nome, email, senha
-            )values(
-                "Júlia Pinheiro", "juju@gatinha.com", "123456"
-            )
-        ';
-        $conexao->exec($query);
+        echo $usuario->nome;
 
-        $query = '
-            insert into tb_usuarios(
-                nome, email, senha
-            )values(
-                "Júlia Gomes", "juju@gmail.com", "456789"
-            )
-        ';
-        $conexao->exec($query);
-
-        $query = '
-            insert into tb_usuarios(
-                nome, email, senha
-            )values(
-                "Maria Silva", "maria@gmail.com", "456789"
-            )
-        ';
-        $conexao->exec($query);
+        //echo $lista[2]['nome'];
+        //objeto: echo $lista[1]->nome;
         
 
     } catch(PDOException $e){
