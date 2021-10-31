@@ -9,19 +9,31 @@
         $conexao = new PDO($dsn, $usuario, $senha);
 
         $query = '
-            select * from tb_usuarios where id = 11
+            select * from tb_usuarios
         ';
 
-        $stmt = $conexao->query($query);
-        $usuario = $stmt->fetch(PDO::FETCH_OBJ);
+        //$stmt = $conexao->query($query);
+
+        foreach($conexao->query($query) as $key => $value){
+            print_r($value);
+        }
+
+        //$lista_usuario = $stmt->fetchAll(PDO::FETCH_OBJ);
         //caso queira numeros: FETCH_NUM
         //caso queira ambos, não passe parametros ou passa FETCH_BOTH
         //se passar FETCH_OBJ, agora é objeto e não mais array
-        echo '<pre>';
-        print_r($usuario);
-        echo '</pre>';
 
-        echo $usuario->nome;
+        //echo '<pre>';
+        //print_r($lista_usuario);
+        //echo '</pre>';
+
+        /*
+        foreach($lista_usuario as $key => $value){
+            print_r($value);
+            //echo $value['nome'];
+            echo '<hr>';
+        }*/
+
 
         //echo $lista[2]['nome'];
         //objeto: echo $lista[1]->nome;
