@@ -51,3 +51,31 @@ else if(idade >= 30 && idade < 60)
  * valores calculadas dentro da aplicação.
  *
 */
+
+var nome = prompt("Digite seu nome:", nome);
+var altura = prompt("Digite seu altura em cm:", altura);
+var peso = prompt("Digite seu peso:", peso);
+
+nome = parseFloat(nome);
+altura = parseFloat(altura);
+peso = parseFloat(peso);
+
+altura = altura/100;
+var M = peso/(altura*altura);
+
+if(M < 16)
+   alert("Baixo peso - muito grave");
+else if(M >= 16 && M <= 16.99)
+   alert("Baixo peso - grave");
+else if(M >= 17 && M <= 18.49)
+   alert("Baixo peso");
+else if(M >= 18.50 && M <= 24.99)
+   alert("Peso normal");
+else if(M >= 25 && M <= 29.99)
+   alert("Sobrepeso");
+else if(M >= 30 && M <= 34.99)
+   alert("Obesidade grau I");
+else if(M >= 35 && M <= 39.99)
+   alert("Obesidade grau II");
+else if(M >= 40)
+   alert("Obesidade grau III");
