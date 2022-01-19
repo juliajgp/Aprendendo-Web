@@ -12,7 +12,9 @@
         <script>
             $(document).ready(() => {
                 
-                $('#nome').val();
+                $.each($('.interesse:checked'), (indice, valor) => {
+                    console.log(indice, valor.value);
+                })
                 
             })
         </script>
@@ -32,6 +34,18 @@
             <option value="3">Linkedin</option>
             <option value="4">Outro</option>
         </select>
+        <br>
+
+        <p>Sexo</p>
+        <input type="radio" name="sexo" class="sexo" value="f">Feminino<br>
+        <input type="radio" name="sexo" class="sexo" value="m">Masculino<br>
+        <br>
+
+        <p>Interesses</p>
+        <input type="checkbox" name="interesse" class="interesse" value="php">PHP<br>
+        <input type="checkbox" name="interesse" class="interesse" value="js">JS<br>
+        <input type="checkbox" name="interesse" class="interesse" value="angular">Angular<br>
+        <input type="checkbox" name="interesse" class="interesse" value="node">Node<br>
         
     </body>
 
