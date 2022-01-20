@@ -11,10 +11,18 @@
 
         <script>
             $(document).ready(() => {
-                
-                $.each($('.interesse:checked'), (indice, valor) => {
-                    console.log(indice, valor.value);
-                })
+
+                //adiciona um item ao final da lista
+                $('#lista1').append('<li>Item 4</li>');
+
+                //adiciona um item no inicio da lista
+                //$('#lista1').prepend('<li>Item 4</li>');
+
+                //inserido após LISTA2
+                $('#lista2').after('<p>Inserido depois</p>');
+
+                //remove toda a lista2
+                //$('#lista2').remove();
                 
             })
         </script>
@@ -23,29 +31,19 @@
 
     <body>
         
-        <p>Nome</p>
-        <input type="text" id="nome">
-        <br>
+        <ul id="lista1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
 
-        <p>Onde você nos encontrou?</p>
-        <select id="origem">
-            <option value="1">Google</option>
-            <option value="2">Facebook</option>
-            <option value="3">Linkedin</option>
-            <option value="4">Outro</option>
-        </select>
-        <br>
+        <div id="lista2">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
 
-        <p>Sexo</p>
-        <input type="radio" name="sexo" class="sexo" value="f">Feminino<br>
-        <input type="radio" name="sexo" class="sexo" value="m">Masculino<br>
-        <br>
-
-        <p>Interesses</p>
-        <input type="checkbox" name="interesse" class="interesse" value="php">PHP<br>
-        <input type="checkbox" name="interesse" class="interesse" value="js">JS<br>
-        <input type="checkbox" name="interesse" class="interesse" value="angular">Angular<br>
-        <input type="checkbox" name="interesse" class="interesse" value="node">Node<br>
+        <hr>
         
     </body>
 
