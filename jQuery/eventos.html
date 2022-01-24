@@ -84,6 +84,22 @@
 
 
 				//Eventos - teclado
+				$('#teclado').keydown(() => {
+					$('#resultadoTeclado').html('Tecla pressionada');
+				})
+
+				$('#teclado').keyup((e) => {
+					$('#resultadoTeclado').html('Tecla liberada');
+
+					if(e.keyCode == 13){
+						let txt = $(e.target).val(); 
+						$('#resultadoTeclado').html(txt);
+						$(e.target).val(''); 
+					}
+				})
+
+				//Eventos - formulários
+				
 
 
 
