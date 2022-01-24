@@ -6,6 +6,12 @@
 
 		<style>
 			
+			#divExterna {
+				background-color: #ccc;
+				width: 80px;
+				height: 80px;
+			}
+
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -59,6 +65,28 @@
 					$('#resultadoDiv').html(': X: ' + e.offsetX + ' || Y: ' + e.offsetY);
 				})
 
+				//antigos -> mouseover/mouseout (efeito bubble)
+				//novos -> mouseenter/mouseleave
+
+				$('#divExterna').mouseover(() => {
+					$('#resultadoDiv1').html('entrou');
+				})
+				/* Resultado será o mesmo se utilizar mouseenter() neste caso
+				$('#divExterna').mouseenter(() => {
+					$('#resultadoDiv1').html('entrou');
+				})
+				*/
+
+				//posso utilizar tbm mouseleave()
+				$('#divExterna').mouseout(() => {
+					$('#resultadoDiv1').html('saiu');
+				})
+
+
+				//Eventos - teclado
+
+
+
 			})
 		</script>
 	</head>
@@ -89,10 +117,14 @@
 			<span>Resultado do evento sobre a div</span><span id="resultadoDiv"></span>
 			<hr>
 
+			<div id="divExterna"></div>
+			<span>Div Externa: </span><span id="resultadoDiv1"></span>
+			<hr>
+
 			<h3>Teclado</h3>
 			<span>Nome:</span>
-			<input type="text" />
-			<span>Resultado do evento sobre o input</span>
+			<input type="text" id="teclado">
+			<span id="resultadoTeclado">Resultado do evento sobre o input</span>
 			<hr>
 
 			<h3>Formulário</h3>
