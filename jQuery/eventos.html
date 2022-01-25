@@ -12,6 +12,10 @@
 				height: 80px;
 			}
 
+			.inputFocado {
+				background-color: aquamarine;
+			}
+
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -99,8 +103,29 @@
 				})
 
 				//Eventos - formulários
+				$('#nome').focus((e) => {
+					$(e.target).addClass('inputFocado');
+				})
 				
+				$('#email').focus((e) => {
+					$(e.target).addClass('inputFocado');
+				})
 
+				$('#nome').blur((e) => {
+					$(e.target).removeClass('inputFocado');
+				})
+
+				$('#email').blur((e) => {
+					$(e.target).removeClass('inputFocado');
+				})
+
+				$('#opcao').change((e) => {
+					console.log($(e.target).val());
+				})
+				$('#form').submit((e) => {
+					e.preventDefault();
+					console.log('Formulario enviado');
+				})
 
 
 			})
@@ -144,21 +169,21 @@
 			<hr>
 
 			<h3>Formulário</h3>
-			<form>
+			<form id="form">
 				<span>Nome:</span>
-				<input type="text">
+				<input type="text" id="nome">
 
 				<span>E-mail:</span>
-				<input type="text">
+				<input type="text" id="email">
 
 				<span>Motivo do contato:</span>
-				<select>
+				<select id="opcao">
 					<option value="">-- Selecione --</option>
 					<option value="duvida">Dúvida</option>
 					<option value="sugestao">Sugestão</option>
 				</select>
 				
-				<button type="button">Enviar</button>
+				<button type="submit">Enviar</button>
 			</form>
 		</div>
 	</body>
