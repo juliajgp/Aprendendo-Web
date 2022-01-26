@@ -14,6 +14,16 @@
                 background-color: rgb(12, 158, 158);
             }
 
+            .emDestaque {
+                background-color: brown;
+            }
+
+            #div1 {
+                width: 80px;
+                height: 80px;
+                border: solid 1px black;
+            }
+
         </style>
 
         <!--jQuery CDN-->
@@ -31,7 +41,38 @@
                     $(e.target).addClass('desfocado');
                 })
                 
-                $('body').append('<br><br><input type="text" class="desfocado">');
+                //$('body').append('<br><br><input type="text" class="desfocado">');
+
+                $('#btn2').on('click', () => {
+                    alert('BTN 2 CLICADO');
+                })
+
+                $('#btn1').on('click', () => {
+                    $('#btn2').trigger('click');
+                })
+
+                /*
+                $('#div1').on('mouseenter', e => {
+                    $(e.target).addClass('emDestaque');
+                })
+                $('#div1').on('mouseleave', e => {
+                    $(e.target).removeClass('emDestaque');
+                })
+                
+               //podemos utilizar em vez dessas duas funções, a função hover:
+               $('#div1').hover(
+                   e => $(e.target).addClass('emDestaque'),
+                   e => $(e.target).removeClass('emDestaque')
+               )
+               */
+              
+              //simplificando ainda mais com o uso da função toggleClass:
+               $('#div1').hover(
+                   e => $(e.target).toggleClass('emDestaque')
+               )
+
+
+
             })
         </script>
 
@@ -40,6 +81,17 @@
     <body>
         
         <input type="text" class="desfocado">
+
+        <br><br>
+
+        <button id="btn1" type="button">BTN 1</button>
+        <button id="btn2" type="button">BTN 2</button>
+
+        <hr>
+
+        <div id="div1">
+
+        </div>
         
     </body>
 
