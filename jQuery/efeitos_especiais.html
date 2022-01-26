@@ -31,6 +31,13 @@
 				padding: 25px;
 				float: left
 			}
+
+			.div4 {
+				width: 80px;
+				height: 80px;
+				border: solid 1px #000;
+				background-color: #aaa;
+			}
 		</style>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -46,6 +53,16 @@
 
 				$('#btn3').on('click', () => {
 					$('#div3').slideToggle('slow');
+				})
+
+				//animações
+				$('button').on('click', () => {
+					$('.div4').animate({
+						'width': '160px',
+						'height': '160px',
+						'margin-left': '200px',
+						'margin-top': '200px'
+					}, 2000);
 				})
 
 				
@@ -69,6 +86,13 @@
 			<button id="btn3" type="button">DIV 3</button>
 			<div id="div3" class="div div3"></div>
 		</div>
+
+		<br><br><br><br><br><br><br><br><br><br>	
+		<hr>
+		<br>
+
+		<button type="button">Iniciar Animação</button>
+		<div class="div4"></div>
 			
 	</body>
 
