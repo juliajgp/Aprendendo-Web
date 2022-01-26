@@ -103,6 +103,7 @@
 				})
 
 				//Eventos - formulários
+				/*
 				$('#nome').focus((e) => {
 					$(e.target).addClass('inputFocado');
 				})
@@ -118,6 +119,14 @@
 				$('#email').blur((e) => {
 					$(e.target).removeClass('inputFocado');
 				})
+				*/
+				$('#nome, #email').focus((e) => {
+					$(e.target).addClass('inputFocado');
+				})
+				$('#nome, #email').blur((e) => {
+					$(e.target).removeClass('inputFocado');
+				})
+
 
 				$('#opcao').change((e) => {
 					console.log($(e.target).val());
