@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+}
+
+/* HEADER */
+
+.header {
+    height: 100vh;
+    background-image: url(images/desktop/image-header.jpg);
+    background-position: center bottom;
+    background-size: cover;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-top: 5px;
+}
+
+#img-logo {
+    width: 200px;
+    display: block;
+    align-self: center;
+    margin-left: 20px;
+    
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0.4em;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0.4rem;
+    margin-right: 1.2em;
+}
+
+.nav-link#contato {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    border-radius: 1.5em;
+    padding: 1rem 1.5rem;
+}
+
+.nav-link:hover {
+    color: rgb(15, 121, 182);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#text1 {
+    font-family: 'Fraunces', serif;
+    font-size: 3em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#arrow {
+    margin-top: 3.5rem;
+}
+
+/* SECTION */
