@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-y: hidden;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    background: url("images/bg-pattern-desktop.svg") no-repeat;
+    background-size: cover;
+    justify-content: center;
+    padding: 0 13rem;
+}
+
+.logo {
+    position: absolute;
+    top: 10%;
+}
+
+.container-text {
+    align-items: center;
+}
+
+.container-text h1 {
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-weight: 300;
+    font-size: 3.5em;
+    margin: 1.5rem 0;
+    line-height: 4rem;
+}
+
+.container-text span {
+    font-weight: 600;
+}
+
+.form-email input {
+    display: block;
+    border-radius: 5px;
+}
+
+.img-lady img{
+    height: 100vh;
+}
+
