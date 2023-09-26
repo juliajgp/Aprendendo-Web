@@ -18,10 +18,53 @@
 }
 
 /* variáveis */
-$variavel: red;
+$variavel: red; 
 
 h2 {
     color: $variavel;
 }
 
+/* Interpolação */
+$classe: red;
+$color: color;
 
+.red { // também posso usar .#{$color} aqui e vai ser substituido por .color no css
+    #{$color}: $classe;
+}
+
+
+ /*******************************************/
+ /* AULA 2: FOR, THROUGH E TO */
+
+ /* utilizando o THROUGH, lê de 1, 2 e 3 
+    utilizando o TO, lê apenas 1 e 2
+ */
+@for $i from 1 through 3 {
+    .item-#{$i} {
+        background: green;
+        margin-bottom: 2px;
+    }
+}
+
+/* while */
+$contador: 1;
+@while $contador < 5 { 
+    $contador: $contador + 1;
+}
+
+/* each */
+$contador: 1;
+$lista: green, yellow, red;
+@each $cor in $lista {
+    .item-#{$contador} {
+        background: $cor;
+        margin-bottom: 2px;
+    }
+
+    $contador: $contador + 1;
+}
+
+/* funções */
+@function largura-coluna() {
+    
+}
