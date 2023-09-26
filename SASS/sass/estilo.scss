@@ -1,0 +1,27 @@
+/* Aninhamento */
+/* Referenciando seletor pai */
+#conteudo {
+    background: green;
+    padding: 15px;
+
+    h1, h2 {
+        color: black;
+    }
+
+    a {
+        color: red;
+
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+
+/* variáveis */
+$variavel: red;
+
+h2 {
+    color: $variavel;
+}
+
+

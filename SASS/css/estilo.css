@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* Aninhamento */
+/* Referenciando seletor pai */
+#conteudo {
+  background: green;
+  padding: 15px;
+}
+#conteudo h1, #conteudo h2 {
+  color: black;
+}
+#conteudo a {
+  color: red;
+}
+#conteudo a:hover {
+  color: yellow;
+}
+
+/* variáveis */
+h2 {
+  color: red;
+}
+
+/*# sourceMappingURL=estilo.css.map */
