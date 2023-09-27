@@ -45,4 +45,102 @@ h2 {
   margin-bottom: 2px;
 }
 
+/* while */
+/* each */
+.item-1 {
+  background: green;
+  margin-bottom: 2px;
+}
+
+.item-2 {
+  background: yellow;
+  margin-bottom: 2px;
+}
+
+.item-3 {
+  background: red;
+  margin-bottom: 2px;
+}
+
+/* funções */
+/* copiando o grid do bootstrap */
+.col-1 {
+  width: 8.3333333333%;
+  background: green;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+  background: green;
+}
+
+.col-3 {
+  width: 25%;
+  background: green;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  background: green;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+  background: green;
+}
+
+.col-6 {
+  width: 50%;
+  background: green;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+  background: green;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+  background: green;
+}
+
+.col-9 {
+  width: 75%;
+  background: green;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+  background: green;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+  background: green;
+}
+
+.col-12 {
+  width: 100%;
+  background: green;
+}
+
+/* outras funções */
+.alerta {
+  background: #809300;
+  color: yellow;
+}
+
+/* mixin */
+h1 {
+  color: white;
+  background: green;
+  padding: 10px 5px;
+}
+
+h2 {
+  color: white;
+  background: black;
+  padding: 10px 5px;
+}
+
 /*# sourceMappingURL=estilo.css.map */

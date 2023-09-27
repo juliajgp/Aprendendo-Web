@@ -65,6 +65,43 @@ $lista: green, yellow, red;
 }
 
 /* funções */
-@function largura-coluna() {
-    
+$total: 12;
+@function largura-coluna($coluna) {
+    //@return calc(($coluna/$total) * 100); 
+    @return percentage(calc($coluna/$total)); 
+}
+
+$resultado: largura-coluna(6);
+// resultado aqui: #{$resultado}
+
+/* copiando o grid do bootstrap */
+@for $i from 1 through $total {
+    .col-#{$i} {
+        width: largura-coluna($i);
+        background: green;
+    }
+}
+
+/* outras funções */
+.alerta {
+    background: mix(green, orange, 50%); //para mesclar cores
+    //background: darken(orange, 50%); //para deixar as cores mais escuras
+    //background: lighten(orange, 50%); //para deixar as cores mais claras
+    color: yellow;
+}
+
+
+/* mixin */
+@mixin titulo($cor, $cor-bg:black) {
+    color: $cor;
+    background: $cor-bg;
+    padding: 10px 5px;
+}
+
+h1 {
+    @include titulo(white, green);
+}
+
+h2 {
+    @include titulo(white);
 }
