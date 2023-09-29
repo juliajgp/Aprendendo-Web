@@ -2,9 +2,44 @@
     //definir modelo
     class Funcionario {
         //atributos
-        public $nome = 'José';
-        public $telefone = '11 99999-8888';
-        public $numFilhos = 2;
+        public $nome = null;
+        public $telefone = null;
+        public $numFilhos = null;
+        public $cargo = null;
+        public $salario = null;
+
+        //getters setters (overloading)
+        function __set($atributo, $valor) {
+            $this->$atributo = $valor;
+        }
+
+        function __get($atributo) {
+            return $this->$atributo;
+        }
+
+        /*
+        //setters
+        function setNome($nome) {
+            $this->nome = $nome;
+        }
+        function setTelefone($telefone) {
+            $this->telefone = $telefone;
+        }
+        function setNumFilhos($numFilhos) {
+            $this->numFilhos = $numFilhos;
+        }
+
+        //getters
+        function getNome () {
+            return $this->nome;
+        }
+        function getTelefone () {
+            return $this->telefone;
+        }
+        function getNumFilhos () {
+            return $this->numFilhos;
+        }
+        */
 
         //métodos
         function resumirCadFunc() {
@@ -18,12 +53,18 @@
     }
 
     $y = new Funcionario();
+    //$y->setNome('Júlia');
+    $y->__set('nome', 'Júlia');
+    //$y->setNumFilhos(4);
+    $y->__set('numFilhos', 7);
     echo $y->resumirCadFunc();
     echo '<br>';
-    $y->modificarNumFilhos(3);
-    echo $y->resumirCadFunc();
+    //echo $y->getNome();
+    echo $y->__get('nome');
+
+    echo '<br>';
     echo '<hr>';
 
-    $x = new Funcionario();
-    echo $x->resumirCadFunc();
+    //$x = new Funcionario();
+    //echo $x->resumirCadFunc();
 ?>
