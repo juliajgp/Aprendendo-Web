@@ -43,7 +43,7 @@
 
         //métodos
         function resumirCadFunc() {
-            return "$this->nome possui $this->numFilhos filho(s)";
+            return $this->__get('nome') . " possui " . $this->__get('numFilhos') . "filho(s)";
         }
 
         function modificarNumFilhos($numFilhos) {
