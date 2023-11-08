@@ -9,12 +9,12 @@ namespace App\Controllers {
 
         public function index() {
             $this->view->dados = array('Sofá', 'Sofá', 'Sofá');
-            $this->render('index');
+            $this->render('index', 'layout1');
         }
 
         public function sobreNos() {
             $this->view->dados = array('Sofá', 'Sofá', 'Sofá');
-            $this->render('sobreNos');
+            $this->render('sobreNos', 'layout1');
         }
 
     }
