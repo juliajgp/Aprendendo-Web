@@ -13,6 +13,11 @@
 			$this->render('index');
 		}
 
+		public function inscreverse() {
+
+			$this->render('inscreverse');
+		}
+
 	}
 
 
