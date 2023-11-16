@@ -20,7 +20,11 @@ class Usuario extends Model {
     }
 
     //salvar
-
+    public function salvar() {
+        $query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(':nome', $this->__get('nome'));
+    }
 
     //validar se um cadastro pode ser feito
 
