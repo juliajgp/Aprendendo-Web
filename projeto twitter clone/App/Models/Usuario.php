@@ -24,6 +24,11 @@ class Usuario extends Model {
         $query = "insert into usuarios(nome, email, senha)values(:nome, :email, :senha)";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':nome', $this->__get('nome'));
+        $stmt->bindValue(':email', $this->__get('email'));
+        $stmt->bindValue(':senha', $this->__get('senha'));
+        $stmt->execute();
+
+        return $this;
     }
 
     //validar se um cadastro pode ser feito
