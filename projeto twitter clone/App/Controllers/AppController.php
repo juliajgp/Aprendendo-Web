@@ -21,5 +21,9 @@
 
         }
 
+        public function tweet() {
+            
+        }
+
     }
 ?>
