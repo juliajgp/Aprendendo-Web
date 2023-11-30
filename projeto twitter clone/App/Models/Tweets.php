@@ -18,7 +18,10 @@
             $this->$atributo = $valor;
         }
 
-        
+        //salvar
+        public function salvar() {
+            $query = "insert into tweets(id_usuario, tweet)";
+        }
 
     }
 
