@@ -49,5 +49,11 @@
             }
         }
 
+        public function quemSeguir() {
+            $this->validaAutenticacao();
+            echo 'estamos aqui';
+
+        }
+
     }
 ?>
