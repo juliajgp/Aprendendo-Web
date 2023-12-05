@@ -10,35 +10,43 @@
 
         public function timeline() {
 
-            session_start();
+            $this->validaAutenticacao();
 
-            if(!empty($_SESSION['id']) && !empty($_SESSION['nome'])) {
-                $this->render('timeline');
-            }
-            else {
-                header('Location: /?login=erro');
-            }
+            //recuperação dos tweets
+            $tweet = Container::getModel('Tweet');
+
+            $tweet->__set('id_usuario', $_SESSION['id']);
+
+            $tweets = $tweet->getAll();
+
+            $this->view->tweets = $tweets;
+            $this->render('timeline');
 
         }
 
         public function tweet() {
 
+            $this->validaAutenticacao();
+
+            $tweet = Container::getModel('Tweet');
+
+            $tweet->__set('tweet', $_POST['tweet']);
+            $tweet->__set('id_usuario', $_SESSION['id']);
+
+            $tweet->salvar();
+
+            header('Location: /timeline');
+
+        }
+
+        public function validaAutenticacao() {
             session_start();
 
             if(!empty($_SESSION['id']) && !empty($_SESSION['nome'])) {
-                $tweet = Container::getModel('Tweet');
-
-                $tweet->__set('tweet', $_POST['tweet']);
-                $tweet->__set('id_usuario', $_SESSION['id']);
-
-                $tweet->salvar();
-            }
-            else {
+                return true;
+            } else {
                 header('Location: /?login=erro');
             }
-
-            
-
         }
 
     }
