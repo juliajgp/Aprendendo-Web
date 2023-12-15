@@ -52,13 +52,19 @@
         public function quemSeguir() {
             $this->validaAutenticacao();
 
-            echo '<br><br><br><br><br><br>';
             $pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
-            echo 'Pesquisando por: '.$pesquisarPor;
+
+            $usuarios = array();
 
             if($pesquisarPor != '') {
-                $usuarios = ;
+                
+                $usuario = Container::getModel('Usuario');
+                $usuario->__set('nome', $pesquisarPor);
+                $usuarios = $usuario->getAll();
+
             }
+
+            $this->view->usuarios = $usuarios;
             
             $this->render('quemSeguir');
         }
