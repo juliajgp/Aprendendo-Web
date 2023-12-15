@@ -51,8 +51,16 @@
 
         public function quemSeguir() {
             $this->validaAutenticacao();
-            echo 'estamos aqui';
 
+            echo '<br><br><br><br><br><br>';
+            $pesquisarPor = isset($_GET['pesquisarPor']) ? $_GET['pesquisarPor'] : '';
+            echo 'Pesquisando por: '.$pesquisarPor;
+
+            if($pesquisarPor != '') {
+                $usuarios = ;
+            }
+            
+            $this->render('quemSeguir');
         }
 
     }
