@@ -70,5 +70,13 @@
             $this->render('quemSeguir');
         }
 
+        public function acao() {
+
+            $this->validaAutenticacao();
+
+            $acao = isset($_GET['acao']) ? $_GET['acao'] : '';
+
+        }
+
     }
 ?>
