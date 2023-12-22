@@ -125,7 +125,7 @@ class Usuario extends Model {
     }
 
     //recupera as informações do Usuario
-    public function getInfoUsuarios() {
+    public function getInfoUsuario() {
         $query = "select nome from usuarios where id = :id_usuario";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':id_usuario', $this->__get('id'));
@@ -157,7 +157,7 @@ class Usuario extends Model {
 
     //total de seguidores
     public function getTotalSeguidores() {
-        $query = "select count(*) as total_seguindo from usuario_seguidores where id_usuario = :id_usuario";
+        $query = "select count(*) as total_seguidores from usuario_seguidores where id_usuario_seguindo = :id_usuario";
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':id_usuario', $this->__get('id'));
         $stmt->execute();
