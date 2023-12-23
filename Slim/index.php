@@ -25,6 +25,15 @@
 
 
     //agrupar rotas
+    $app->group('/v1', function() {
+        
+        $this->get('/usuarios', function() {
+            echo "listagem";
+        });
+        $this->get('/postagem', function() {
+            echo "listagem";
+        });
+    });
 
     $app->run();
 ?>
